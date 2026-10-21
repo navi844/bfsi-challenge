@@ -1,0 +1,6 @@
+complaint_id,customer_ref,category,status,opened,summary
+CMP-1001,CUST-5521,Overdraft charge dispute,open,2026-09-28,Customer disputes an overdraft interest charge applied after a payment date error.
+CMP-1002,CUST-5589,Mortgage rate mis-quote,open,2026-10-01,Customer was quoted the 75% LTV rate but offered the 90% LTV rate at completion.
+CMP-1003,CUST-5602,Delayed fraud hold release,open,2026-10-03,Legitimate transaction held for review beyond the standard turnaround; customer escalated.
+CMP-1004,CUST-5477,Savings rate change notice,resolved,2026-09-10,Customer queried notice period for a Fixed Saver rate change; resolved with explanation.
+CMP-1005,CUST-5390,Premier fee charged in error,resolved,2026-08-30,Monthly fee charged despite meeting waiver criteria; refunded same week.

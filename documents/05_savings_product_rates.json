@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-01",
+  "products": [
+    {
+      "name": "Premier Easy Saver",
+      "aer": 4.1,
+      "type": "variable",
+      "access": "instant"
+    },
+    {
+      "name": "Premier Fixed Saver (1yr)",
+      "aer": 4.55,
+      "type": "fixed",
+      "access": "none_until_maturity"
+    },
+    {
+      "name": "Standard Easy Saver",
+      "aer": 3.25,
+      "type": "variable",
+      "access": "instant"
+    },
+    {
+      "name": "ISA Saver",
+      "aer": 3.9,
+      "type": "variable",
+      "access": "instant",
+      "tax_wrapper": "ISA"
+    }
+  ]
+}
