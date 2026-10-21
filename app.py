@@ -112,7 +112,14 @@ def chat(session_id: str = Query(...), message: str = Query(...)):
     session = store.get_or_create(session_id)
     history = [{"role": t["role"], "content": t["content"]} for t in session.turns]
     session.append("user", message)
-    result = _run_agent_turn(message, history=history)
+
+    with tracer.start_as_current_span("agent_turn") as span:
+        span.set_attribute("session.id", session_id)
+        span.set_attribute("agent.question", (message or "")[:200])
+        result = _run_agent_turn(message, history=history)
+        span.set_attribute("agent.steps", result.get("steps", 0))
+        span.set_attribute("agent.tool_sequence", ",".join(result.get("tool_sequence", [])))
+
     session.append("assistant", result["answer"] or "")
     session.truncate()
     return {"session_id": session_id, "answer": result["answer"]}

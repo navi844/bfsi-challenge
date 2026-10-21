@@ -19,7 +19,7 @@ from opentelemetry import trace
 ENV_FILE = Path(__file__).resolve().parent / ".env"
 load_dotenv(dotenv_path=ENV_FILE)
 
-DEFAULT_MODEL = "gpt-4o-mini"
+DEFAULT_MODEL = "gpt-4o"
 _client: Optional[OpenAI] = None
 
 # Metric instrument (created at import time from configured MeterProvider)
